@@ -1,0 +1,7 @@
+mcp[cli]
+httpx
+asyncio
+nest_asyncio
+pytest
+pytest-asyncio
+streamlit
