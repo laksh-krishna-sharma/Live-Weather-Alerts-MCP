@@ -13,7 +13,10 @@ async def get_weather_alerts(state: str = "CA") -> str:
     """
     Connects to the weather MCP server and fetches alerts for the specified state.
     """
-    async with sse_client("https://live-weather-alerts-mcp.onrender.com/sse") as (read_stream, write_stream):
+    async with sse_client("https://live-weather-alerts-mcp.onrender.com/sse") as (
+        read_stream,
+        write_stream,
+    ):
         async with ClientSession(read_stream, write_stream) as session:
             await session.initialize()
 

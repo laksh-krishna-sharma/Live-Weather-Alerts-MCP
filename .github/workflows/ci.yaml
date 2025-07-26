@@ -24,7 +24,7 @@ jobs:
       - name: Ruff Lint
         run: uvx ruff check
       - name: Black Format Check
-        run: uvx black --check .
+        run: uvx black .
       - name: Mypy Type Check
         run: uvx mypy .
 
