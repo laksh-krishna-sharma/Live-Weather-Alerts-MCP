@@ -1,6 +1,7 @@
 """
 Pytest configuration file for weather MCP project tests.
 """
+
 import asyncio
 import sys
 from pathlib import Path
@@ -30,18 +31,18 @@ def mock_nws_response():
                     "areaDesc": "Los Angeles County",
                     "severity": "Severe",
                     "description": "Heavy snow expected with accumulations of 6-12 inches.",
-                    "instruction": "Avoid unnecessary travel. Use caution if you must travel."
+                    "instruction": "Avoid unnecessary travel. Use caution if you must travel.",
                 }
             },
             {
                 "properties": {
-                    "event": "Heat Advisory", 
+                    "event": "Heat Advisory",
                     "areaDesc": "Orange County",
                     "severity": "Minor",
                     "description": "Dangerously hot conditions expected.",
-                    "instruction": "Drink plenty of fluids and stay in air conditioning."
+                    "instruction": "Drink plenty of fluids and stay in air conditioning.",
                 }
-            }
+            },
         ]
     }
 
@@ -68,16 +69,16 @@ def mock_forecast_response():
                     "temperatureUnit": "F",
                     "windSpeed": "10 mph",
                     "windDirection": "SW",
-                    "detailedForecast": "Sunny with clear skies."
+                    "detailedForecast": "Sunny with clear skies.",
                 },
                 {
                     "name": "Tonight",
                     "temperature": 55,
-                    "temperatureUnit": "F", 
+                    "temperatureUnit": "F",
                     "windSpeed": "5 mph",
                     "windDirection": "W",
-                    "detailedForecast": "Clear skies with light winds."
-                }
+                    "detailedForecast": "Clear skies with light winds.",
+                },
             ]
         }
     }
@@ -86,9 +87,7 @@ def mock_forecast_response():
 @pytest.fixture
 def mock_empty_nws_response():
     """Fixture providing a mock empty NWS API response."""
-    return {
-        "features": []
-    }
+    return {"features": []}
 
 
 @pytest.fixture
@@ -98,8 +97,8 @@ def sample_alert_feature():
         "properties": {
             "event": "Flash Flood Warning",
             "areaDesc": "Harris County",
-            "severity": "Severe", 
+            "severity": "Severe",
             "description": "Flash flooding in progress due to heavy rainfall.",
-            "instruction": "Turn around, don't drown. Find alternate route."
+            "instruction": "Turn around, don't drown. Find alternate route.",
         }
     }

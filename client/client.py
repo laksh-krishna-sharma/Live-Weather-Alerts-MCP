@@ -1,11 +1,13 @@
 """
 MCP client for connecting to the weather server.
 """
+
 import nest_asyncio
 from mcp import ClientSession
 from mcp.client.sse import sse_client
 
 nest_asyncio.apply()
+
 
 async def get_weather_alerts(state: str = "CA") -> str:
     """
@@ -16,4 +18,4 @@ async def get_weather_alerts(state: str = "CA") -> str:
             await session.initialize()
 
             result = await session.call_tool("get_alerts", arguments={"state": state})
-            return result.content[0].text
+            return str(result.content[0].text)

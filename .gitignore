@@ -21,3 +21,4 @@ tmp/
 *.log
 .python-version
 uv.lock
+.mypy_cache/

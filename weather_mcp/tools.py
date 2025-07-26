@@ -1,7 +1,9 @@
 """
 Weather tools for processing alerts and forecasts.
 """
+
 from weather_mcp.nws_api import make_nws_request, NWS_API_BASE
+
 
 def format_alert(feature: dict) -> str:
     """Format an alert feature into a readable string."""
@@ -13,6 +15,7 @@ def format_alert(feature: dict) -> str:
     Description: {props.get('description', 'No description available')}
     Instructions: {props.get('instruction', 'No specific instructions provided')}
     """
+
 
 async def get_alerts(state: str) -> str:
     """Get weather alerts for a US state.
@@ -31,6 +34,7 @@ async def get_alerts(state: str) -> str:
 
     alerts = [format_alert(feature) for feature in data["features"]]
     return "\n---\n".join(alerts)
+
 
 async def get_forecast(latitude: float, longitude: float) -> str:
     """Get weather forecast for a location.
