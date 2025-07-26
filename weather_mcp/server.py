@@ -1,5 +1,5 @@
 from mcp.server.fastmcp import FastMCP
-from weather_mcp.tools import get_alerts as get_alerts_tool
+from weather_mcp.tools import get_alerts as get_alerts_tool, get_forecast
 
 mcp = FastMCP(
     name="weather",
@@ -15,7 +15,7 @@ async def _mcp_get_alerts_tool_impl(state: str) -> str:
 async def get_forecast_tool(latitude: float, longitude: float) -> str:
     return await get_forecast(latitude, longitude)
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     transport = "sse"
     if transport == "stdio":
         print("Running server with stdio transport")
