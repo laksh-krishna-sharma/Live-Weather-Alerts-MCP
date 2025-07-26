@@ -1,3 +1,6 @@
+"""
+MCP client for connecting to the weather server.
+"""
 import nest_asyncio
 from mcp import ClientSession
 from mcp.client.sse import sse_client

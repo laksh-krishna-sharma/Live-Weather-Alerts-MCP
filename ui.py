@@ -1,5 +1,8 @@
-import streamlit as st
+"""
+Streamlit web interface for weather alerts.
+"""
 import asyncio
+import streamlit as st
 from client.client import get_weather_alerts
 
 st.set_page_config(page_title="🌤 Weather Alerts", layout="centered")
@@ -9,6 +12,7 @@ st.write("Get weather alerts from the US National Weather Service (weather.gov)"
 state = st.text_input("Enter US State Code (e.g., CA, TX, NY):", value="CA")
 
 async def fetch_alerts(state: str):
+    """Fetch weather alerts for the given state."""
     try:
         return await get_weather_alerts(state)
     except Exception as e:

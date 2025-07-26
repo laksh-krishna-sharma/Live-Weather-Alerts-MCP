@@ -1,10 +1,10 @@
 """
 Pytest configuration file for weather MCP project tests.
 """
-import pytest
 import asyncio
 import sys
 from pathlib import Path
+import pytest
 
 # Add the project root to Python path for imports
 project_root = Path(__file__).parent.parent

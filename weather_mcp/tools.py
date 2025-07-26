@@ -1,3 +1,6 @@
+"""
+Weather tools for processing alerts and forecasts.
+"""
 from weather_mcp.nws_api import make_nws_request, NWS_API_BASE
 
 def format_alert(feature: dict) -> str:

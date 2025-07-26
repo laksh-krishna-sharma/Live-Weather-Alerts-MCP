@@ -1,5 +1,8 @@
-import httpx
+"""
+National Weather Service API client.
+"""
 from typing import Any
+import httpx
 
 NWS_API_BASE = "https://api.weather.gov"
 USER_AGENT = "weather-app/1.0"
