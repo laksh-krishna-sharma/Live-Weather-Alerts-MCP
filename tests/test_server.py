@@ -2,8 +2,7 @@
 Tests for the Weather MCP server.
 """
 import pytest
-import sys
-from unittest.mock import AsyncMock, patch, MagicMock
+from unittest.mock import AsyncMock, patch
 from weather_mcp.server import mcp, _mcp_get_alerts_tool_impl, get_forecast_tool
 
 

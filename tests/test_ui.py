@@ -12,7 +12,7 @@ class TestWeatherUI:
     def test_ui_module_imports(self):
         """Test that the UI module can be imported without errors."""
         try:
-            import ui
+            import ui  # noqa: F401
             # Basic smoke test - the module should import successfully
             assert True
         except ImportError as e:
@@ -29,7 +29,6 @@ class TestWeatherUI:
         mock_st.button = MagicMock(return_value=False)
         
         # Import and test
-        import ui
         
         # Manually trigger the expected calls to test the logic
         mock_st.set_page_config(page_title="🌤 Weather Alerts", layout="centered")
@@ -54,7 +53,6 @@ class TestWeatherUI:
         mock_st.button = MagicMock(return_value=False)
         
         # Import ui module
-        import ui
         
         # Test the UI components
         state = mock_st.text_input("Enter US State Code (e.g., CA, TX, NY):", value="CA")
@@ -118,7 +116,6 @@ class TestWeatherUI:
         mock_st.spinner.return_value = spinner_context
         
         # Import ui module
-        import ui
         
         # Simulate the UI flow
         state = mock_st.text_input("Enter US State Code (e.g., CA, TX, NY):", value="CA")
@@ -166,10 +163,9 @@ class TestWeatherUI:
         mock_st.spinner.return_value = spinner_context
         
         # Import ui module
-        import ui
         
         # Simulate error handling
-        state = mock_st.text_input("Enter US State Code (e.g., CA, TX, NY):", value="CA")
+        mock_st.text_input("Enter US State Code (e.g., CA, TX, NY):", value="CA")
         button_clicked = mock_st.button("Fetch Alerts")
         
         if button_clicked:
