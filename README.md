@@ -111,7 +111,7 @@ The server exposes two MCP tools:
 1. **`get_alerts`** - Fetch weather alerts by state
 2. **`get_forecast`** - Fetch weather forecast by coordinates
 
-## 🛠️ Development
+## Development
 
 ### Project Structure
 
@@ -139,12 +139,12 @@ weather-mcp-project/
 
 This project maintains high code quality standards:
 
-- **🧪 100% Test Coverage** - Every line of code is tested
-- **🔍 Type Checking** - Full MyPy compliance
-- **📏 Linting** - Ruff for code formatting and style
-- **📋 Standards** - Follows Python best practices
+- **100% Test Coverage** - Every line of code is tested
+- **Type Checking** - Full MyPy compliance
+- **Linting** - Ruff for code formatting and style
+- **Standards** - Follows Python best practices
 
-## 🧪 Testing
+## Testing
 
 
 ### Run with Coverage
