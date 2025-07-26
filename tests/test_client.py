@@ -148,7 +148,7 @@ class TestWeatherClient:
             await get_weather_alerts("CA")
 
             # Verify SSE client was called with correct URL
-            mock_sse.assert_called_once_with("http://localhost:8000/sse")
+            mock_sse.assert_called_once_with("https://live-weather-alerts-mcp.onrender.com/sse")
 
     @pytest.mark.asyncio
     async def test_get_weather_alerts_session_error(self):
